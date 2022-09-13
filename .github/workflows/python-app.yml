@@ -43,4 +43,4 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: user/app:latest
+        tags: mdicky7/imagedocker:tagname
