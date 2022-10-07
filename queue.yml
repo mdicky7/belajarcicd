@@ -1,0 +1,19 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    restart: always
+    tty: true
+    ports:
+        - "5672:5672"
+        - "15672:15672"
+    volumes:
+        - rabbitmq-data:/var/lib/rabbitmq/
+        - rabbitmq-log:/var/log/rabbitmq
+    environment:
+        - RABBITMQ_DEFAULT_USER=media
+        - RABBITMQ_DEFAULT_PASS=sekawan
+
+volumes:
+ rabbitmq-data:
+ rabbitmq-log:
